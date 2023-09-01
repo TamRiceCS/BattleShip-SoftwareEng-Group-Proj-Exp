@@ -1,0 +1,196 @@
+body,html {
+  margin: 0;
+  height: 100%;
+  font-family: 'Lilita One', cursive;
+
+}
+
+.startScreen,
+.gameOptions,
+.gameOver {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  text-align: center;
+  padding-right: 50px;
+  font-family: 'Lilita One', cursive;
+  font-size: 30px;
+
+}
+
+.title-image{
+  background-image: url('resources/WelcomeScreen2.jpg');
+  height: 100%; 
+   background-position: right;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+
+.right-arrows{
+  font-family: 'Blaka Hollow', cursive;
+  animation-name: flash;
+  animation-duration: 3s;
+
+  position: absolute;
+  width: 33%;
+  height: 106px;
+  top: -39px;
+  left: 67%;
+  font-size: 90px;
+  background: linear-gradient(90deg, rgba(255,199,0,0) 0%, rgba(208,165,27,1) 50%, rgba(248,255,114,1) 100%);
+  color: yellow;
+}
+  .left-arrows{
+  animation-name: flash;
+  animation-duration: 3s;
+
+  font-family: 'Blaka Hollow', cursive;
+  position: absolute;
+  width: 33%;
+  height: 106px;
+  top: -39px;
+  font-size: 90px;
+  color: orange;
+  background: linear-gradient(90deg, rgba(255,0,0,0.8981967787114846) 9%, rgba(208,104,27,1) 50%, rgba(255,167,114,0) 100%);
+} 
+
+.player-highlight{
+  background: linear-gradient(90deg, rgba(255,199,0,0) 0%, rgba(208,165,27,1) 50%, rgba(248,255,114,1) 100%);
+}
+
+.enemy-highlight{
+  background: linear-gradient(90deg, rgba(255,0,0,0.8981967787114846) 9%, rgba(208,104,27,1) 50%, rgba(255,167,114,0) 100%);
+}
+
+@keyframes flash {
+  0%{opacity: 0;}
+  25%{opacity: 1;}
+  50%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.gameBoard {
+  background-image: url('resources/BattleScreen.jpg');
+  /* Full height */
+  height: 150%; 
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.placeShips {
+  width: 25%;
+  padding-top: 6%;
+  padding-bottom: 50%;
+}
+
+
+.shipBtn {
+  display: block;
+  margin: 30px;
+  background: white;
+  border: 3px solid black;
+}
+
+.bombBtn {
+  display: block;
+  margin: 30px;
+  background: white;
+  border: 3px solid black;
+}
+.highlight{
+  background-color: yellow;
+  text-decoration: underline;
+  width: 120px;
+}
+
+.instructions{
+  text-align: left;
+  font-size: 15px;
+  margin: 30px;
+  background-image: url('resources/GraphPaper.png');
+  object-fit: cover;
+  border: 3px solid black;
+
+}
+
+.title-animation{
+  animation-name: title;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+@keyframes title {
+  0% {height: 0px; background-color: red;}
+  100% {height: 100px; }
+
+  
+}
+
+h1 {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 0px;
+}
+
+button {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.homebtn{
+  background-color: lightblue;
+  opacity: .6;
+  border-radius: 40px 90px 40px 90px;
+
+}
+
+.homebtn:hover{
+  color: purple;
+  border-radius: 90px 40px 90px 40px;
+  opacity: 1;
+
+}
+
+.selected {
+  z-index: 10;
+}
+
+.highlightImg {
+  z-index: 8;
+}
+
+.fog {
+  z-index: 5;
+}
+
+.ship, .totem, .splash {
+  z-index: 2;
+}
+
+.oceanImg {
+  z-index: 1;
+}
+
+table {
+  border: 4px solid gold;
+  color: gold;
+}
+td {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+td img{
+  position: absolute;
+}
+
+
+.change {
+  background-color: red;
+  color: red;
+}

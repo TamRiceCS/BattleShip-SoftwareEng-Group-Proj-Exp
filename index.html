@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Project BattleShip ⚓️</title>
+
+    <!-- style sheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- Preloads -->
+    <link rel="preload" href="resources/WelcomeScreen2.jpg" as="image" />
+    <link rel="preload" href="resources/BattleScreen.jpg" as="image" />
+
+    <!-- This is for google font welcome screent and other texts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Blaka+Hollow&display=swap" rel="stylesheet">
+
+    <!-- Make viewport adapt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+    <!-- All of out JS files-->
+    <script src="globals.js"></script>
+    <script src="fogwall.js"></script>
+    <script src="view.js"></script>
+    <script src="game_display.js"></script>
+    <script src="highlight.js"></script>
+    <script src="select.js"></script>
+    <script src="enemy.js"></script>
+    <script src="Ship.js"></script>
+
+
+
+    <!-- <script>
+
+        let test = "E,30,45"
+        console.log(convertMeCaptain(test))
+        createVirtualBoard();
+
+        console.log(virtual_enemy)
+        console.log(virtual_player);
+        placeVirtualShips();
+        console.log(virtual_enemy)
+        console.log(virtual_player);
+    </script> -->
+
+</head>
+
+<body>
+    <div class="title-image" id="backgroundImage">
+        <div class="startScreen" id="start" align="center" style="display: block">
+            <h1>Welcome to BattleShips: <br> Battle</h1>
+            <button onclick="playerOptions()" class="homebtn">Let's Play!!</button>
+        </div>
+
+        <div class="gameOptions" id="options" align="center" style="display: none">
+            <h1>How do you want to play?</h1>
+            <button onclick="startCoopGame()" class="homebtn">Co-Op</button>
+            <button onclick="startGame()" class="homebtn">Solo</button>
+        </div>
+
+        <div class="gameOver" id="over" align="center" style="display: none">
+            <div id="stats">
+            </div>
+            <!-- <button onclick="again()" class="homebtn">Play Again</button> -->
+            <button onclick="back2Home()" class="homebtn">Back to Home</button>
+        </div>
+
+
+        <div class="row" id="mainRow" align="center" style="display: none">
+            <div class="placeShips" id="place" align="center" style="float: left;">
+                <h4 id="title1">Place Ships</h4>
+                <button onclick="report(2, 1)" id="sh1" class="shipBtn">
+                    Sub Chaser
+                </button>
+                <button onclick="report(3, 2)" id="sh2" class="shipBtn">
+                    Sub Bomber
+                </button>
+                <button onclick="report(3, 3)" id="sh3" class="shipBtn">
+                    Patrol Bomber
+                </button>
+                <button onclick="report(4, 4)" id="sh4" class="shipBtn">
+                    Auxiliary Carrier
+                </button>
+                <button onclick="report(5, 5)" id="sh5" class="shipBtn">
+                    Aircraft Carrier
+                </button>
+
+
+                <ul class="instructions">
+                    <h5 class="highlight">How To Play:</h5>
+                    <li>Place ships/traps onto your board by clicking from the left panel and hovering over one of
+                        your ocean tiles.
+                    </li>
+                    <li>Hit finish and begin hovering/clicking on enemy board to guess.
+                    </li>
+                    <li>Hit will display a broken piece. A miss will show a splash of water.
+                    </li>
+                    <li>First to destroy all ships wins the game! Good Luck!
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <div class="placeShips" id="place" align="center" style="float: right; ">
+                <h4 id="title2">Place Traps</h4>
+                <button class="bombBtn" id="mine1">Naval Mine 1</button>
+                <button class="bombBtn" id="mine2">Naval Mine 2</button>
+                <button class="bombBtn" id="mine3">Naval Mine 3</button>
+                <button class="bombBtn" id="mine4">Naval Mine 4</button>
+                <button class="bombBtn" id="mine5">Naval Mine 5</button>
+                <button onclick="placeDone()" id="finBtn" class="bombBtn" style="background-color: #f17373">
+                    Finish
+                </button>
+            </div>
+
+
+            <div class="" id="game" align="center">
+            
+                <div class="" id="columnA" align="center">
+    
+                    <div id="title-animation">
+                        <div class="right-arrows">
+                            > > > > > > >
+                        </div>
+                        <div class="left-arrows">
+                            < < < < < < <
+                        </div>
+                        <h3 id="title-feedback">Battleships:<br/>Boss Battle</h3>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div id="columnB">
+                <div id="boards"></div>                    
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "globals": {
+      "BOARD_SIZE": 10,
+      "virtual_player": [[]],
+      "virtual_enemy": [[]],
+      "virtual_player_two": [[]],
+      "gameType": 0
+    }
+  }
+}
